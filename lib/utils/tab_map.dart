@@ -10,22 +10,22 @@ final List<Map<String, dynamic>> pageDetails = [
     ),
     "title": "Home",
     "botton_color": Color(0xff344e41),
-    "navvigationBarColor": Color(0xff344e41),
+    "navvigationBarColor": Color(0xff344e41).withOpacity(0.8),
   },
   {
     "pageName": MapsPage(
       backgroundColor: Color(0xff3a5a40),
     ),
-    "title": "Home",
+    "title": "Maps",
     "botton_color": Color(0xff3a5a40),
-    "navvigationBarColor": Color(0xff3a5a40),
+    "navvigationBarColor": Color(0xff344e41).withOpacity(0.8),
   },
   {
     "pageName": StreamPage(
       backgroundColor: Color(0xff588157),
     ),
-    "title": "Home",
+    "title": "Streams",
     "botton_color": Color(0xff588157),
-    "navvigationBarColor": Color(0xff588157),
+    "navvigationBarColor": Color(0xff344e41).withOpacity(0.8),
   },
 ];

@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebaseappc2/firebase_options.dart';
+import 'package:firebaseappc2/pages/candidate_page.dart';
 import 'package:firebaseappc2/pages/create_account_page.dart';
 import 'package:firebaseappc2/pages/home_pages.dart';
 import 'package:firebaseappc2/pages/maps_page.dart';
@@ -13,7 +14,7 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
   runApp(MaterialApp(
-    home: TabPage(),
+    home: CandidatePage(),
     debugShowCheckedModeBanner: false,
   ));
 }
