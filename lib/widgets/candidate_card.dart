@@ -7,7 +7,6 @@ class CandidateCard extends StatefulWidget {
   String candidato;
   int votos;
   String docKey;
-  final Function refesh;
 
   CandidateCard({
     required this.image,
@@ -15,7 +14,6 @@ class CandidateCard extends StatefulWidget {
     required this.candidato,
     required this.votos,
     required this.docKey,
-    required this.refesh,
   });
 
   @override
@@ -24,16 +22,16 @@ class CandidateCard extends StatefulWidget {
 
 class _CandidateCardState extends State<CandidateCard> {
   CollectionReference candidateReference =
-      FirebaseFirestore.instance.collection("partidosPolíticos");
+      FirebaseFirestore.instance.collection("partidosPolÃ­ticos");
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () async {
         await candidateReference.doc(widget.docKey).update(
-          {"nvotos": widget.votos + 1},
+          {"nvotos": widget.votos++},
         );
-        widget.refesh;
+        setState(() {});
       },
       child: Card(
         shape: RoundedRectangleBorder(
@@ -59,7 +57,7 @@ class _CandidateCardState extends State<CandidateCard> {
                 width: 25,
               ),
               Container(
-                width: MediaQuery.of(context).size.width / 2,
+                width: MediaQuery.of(context).size.width / 2.5,
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   crossAxisAlignment: CrossAxisAlignment.start,

@@ -12,10 +12,6 @@ class _CandidatePageState extends State<CandidatePage> {
   CollectionReference candidateReference =
       FirebaseFirestore.instance.collection("partidosPolíticos");
 
-  void refreshVote() {
-    setState(() {});
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,7 +33,6 @@ class _CandidatePageState extends State<CandidatePage> {
               itemCount: docs.length,
               itemBuilder: (context, index) {
                 return CandidateCard(
-                    refesh: refreshVote,
                     docKey: docs[index].id,
                     image: docs[index]["image"],
                     partido: docs[index]["partidoPolitico"],
