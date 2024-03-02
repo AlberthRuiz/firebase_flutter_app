@@ -40,6 +40,9 @@ dependencies:
   cloud_firestore: ^4.13.6
   google_sign_in: ^5.4.2
   google_sign_in_ios: ^5.7.3
+  google_maps_flutter: ^2.6.0
+  google_maps_flutter_ios: ^2.5.0
+  logger: ^2.0.2+1
 
 dev_dependencies:
   flutter_test:

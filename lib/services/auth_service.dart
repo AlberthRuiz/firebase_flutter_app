@@ -1,3 +1,4 @@
+// ignore_for_file: must_be_immutable
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
@@ -12,10 +13,6 @@ class AuthService {
         accessToken: gAuth?.accessToken,
         idToken: gAuth?.idToken,
       );
-
-      UserCredential results =
-          await firebaseAuth.signInWithCredential(credential);
-      User? userDetaisl = results.user;
     } catch (e) {
       print(e.toString());
     }
