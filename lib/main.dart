@@ -4,6 +4,7 @@ import 'package:firebaseappc2/pages/create_account_page.dart';
 import 'package:firebaseappc2/pages/home_pages.dart';
 import 'package:firebaseappc2/pages/maps_page.dart';
 import 'package:firebaseappc2/pages/stream_page.dart';
+import 'package:firebaseappc2/pages/tab_page.dart';
 import 'package:flutter/material.dart';
 
 void main() async {
@@ -12,7 +13,7 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
   runApp(MaterialApp(
-    home: MapsPage(),
+    home: TabPage(),
     debugShowCheckedModeBanner: false,
   ));
 }

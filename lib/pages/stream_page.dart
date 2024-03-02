@@ -4,6 +4,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 class StreamPage extends StatefulWidget {
+  Color backgroundColor;
+  StreamPage({required this.backgroundColor});
   @override
   State<StreamPage> createState() => _StreamPageState();
 }
@@ -77,9 +79,10 @@ class _StreamPageState extends State<StreamPage> {
     //   },
     // );
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Stream Page"),
-      ),
+      // appBar: AppBar(
+      //   title: Text("Stream Page"),
+      // ),
+      backgroundColor: widget.backgroundColor,
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           myIntStreamController.add(myCounter);

@@ -42,7 +42,11 @@ class LoginPage extends StatelessWidget {
         ),
       );
       Navigator.push(
-          context, MaterialPageRoute(builder: (context) => HomePage()));
+          context,
+          MaterialPageRoute(
+              builder: (context) => HomePage(
+                    backgroundColor: Colors.black,
+                  )));
       // return userCredential;
     } catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(
