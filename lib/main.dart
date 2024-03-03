@@ -3,6 +3,7 @@ import 'package:firebaseappc2/firebase_options.dart';
 import 'package:firebaseappc2/pages/candidate_page.dart';
 import 'package:firebaseappc2/pages/create_account_page.dart';
 import 'package:firebaseappc2/pages/home_pages.dart';
+import 'package:firebaseappc2/pages/maps2_page_custom.dart';
 import 'package:firebaseappc2/pages/maps_page.dart';
 import 'package:firebaseappc2/pages/stream_page.dart';
 import 'package:firebaseappc2/pages/tab_page.dart';
@@ -14,7 +15,7 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
   runApp(MaterialApp(
-    home: CandidatePage(),
+    home: Map2Page(),
     debugShowCheckedModeBanner: false,
   ));
 }
